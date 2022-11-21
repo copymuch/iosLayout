@@ -5,22 +5,23 @@ $bdMaxWidth: 120rem;
 $containerMaxWidth: 69.3rem;
 $containerMinWidth: 375px;
 //Цвет фона
-$bgColor: #fff;
+$bgColor: #333333;
 //Найстройки заголовков
 $hFont : 'Open Sans', sans-serif;
 $hColor: #fff;
 $h1Weight : 700;
-$h2Weight : 700;
+$h2Weight : 300;
+$h3Weight : 700;
 $h1Size: 4rem;
-$h2Size: 1.8rem;
-$h3Size: 1.38rem;
+$h2Size: 3rem;
+$h3Size: 1.31rem;
 //Настройки параграфа
 $paraFont: 'Open Sans', sans-serif;
 $paraColor: #fff;
 $paraWeight: 400;
 $paraSize: 0.8rem;
 //Настройка отступов
-$sectionMargin: 0;
+$sectionMargin: 150px 0;
 $sectionPadding: 0;
 
 @mixin bgProperty (){
@@ -28,7 +29,6 @@ $sectionPadding: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-
 section,header,footer,body,ul {
 	margin: 0;
 	padding: 0;
@@ -60,7 +60,7 @@ body {
 
 h1 {font-size: $h1Size;font-weight: $h1Weight;}
 h2 {font-size: $h2Size;font-weight: $h2Weight;}
-h3 {font-size: $h3Size;}
+h3 {font-size: $h3Size;font-weight: $h3Weight;}
 
 h1,h2,h3 {
 	color: $hColor;

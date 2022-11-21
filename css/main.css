@@ -4,7 +4,7 @@ section, header, footer, body, ul {
 }
 
 section {
-  margin: 0;
+  margin: 150px 0;
   padding: 0;
 }
 
@@ -15,7 +15,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background: #fff;
+  background: #333333;
   font-family: "Open Sans", sans-serif;
   max-width: 120rem;
 }
@@ -35,12 +35,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 h3 {
-  font-size: 1.38rem;
+  font-size: 1.31rem;
+  font-weight: 700;
 }
 
 h1, h2, h3 {
@@ -75,13 +76,28 @@ button:hover {
   transition: all 0.2s ease;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-stretch: condensed;
+}
+h2::first-letter {
+  color: #D1A954;
+}
+
+h3 {
+  margin-bottom: 40px;
+}
+
 header {
   padding-top: 50px;
 }
 
 .nav__bar {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   justify-content: space-between;
 }
 
@@ -91,6 +107,14 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   font-stretch: condensed;
+}
+.nav__bar-item:last-of-type {
+  margin-left: 45px;
+  border-bottom: 2px solid #D1A954;
+}
+
+.promo {
+  margin-top: 0;
 }
 
 .promo, header {
@@ -111,7 +135,7 @@ header {
 }
 
 .promo__text-content {
-  max-width: 46%;
+  max-width: 52%;
 }
 .promo__text-content h1 {
   text-transform: uppercase;
@@ -129,6 +153,7 @@ header {
 
 .promo__img {
   margin-right: 75px;
+  max-width: 30%;
 }
 .promo__img img {
   max-width: 100%;
@@ -146,88 +171,68 @@ header {
   gap: 25px;
 }
 
-@media (max-width: 1000px) {
-  .block__quote {
-    flex: 1 1 30%;
-  }
+.gold-span {
+  color: #D1A954;
 }
-@media (max-width: 821px) {
-  html {
-    font-size: 90%;
-  }
-  .button-trailer img {
-    max-width: 10%;
-  }
-  .more-skills__list li {
-    max-width: 30%;
-  }
+
+.title {
+  text-align: center;
 }
-@media (max-width: 762px) {
-  .learn__container, .skills__container {
-    justify-content: center;
+
+.flex-content {
+  display: flex;
+}
+
+.about__flex-content {
+  margin-top: 100px;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about__text-content {
+  max-width: 38%;
+}
+
+@media (max-width: 992px) {
+  .nav__bar {
     flex-wrap: wrap;
   }
-  .learn__text-content, .skills__text-content {
-    max-width: 100%;
+  .promo__img {
+    display: none;
   }
-  .block__quote {
-    flex: 1 1 50%;
+  .promo__text-content {
+    max-width: 67%;
+  }
+  .about__text-content {
+    max-width: 60%;
+  }
+  .about__img {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .nav__bar-item {
+    display: none;
+  }
+  .nav__bar-item:last-of-type {
+    display: flex;
+    align-self: end;
   }
 }
 @media (max-width: 680px) {
   html {
     font-size: 80%;
   }
-  .more-skills__list {
-    justify-content: center;
-  }
-  .more-skills__list li {
-    text-align: center;
-    max-width: 50%;
-  }
 }
-@media (max-width: 560px) {
-  .promo__container, .privilege__container {
-    flex-wrap: wrap;
-    position: relative;
-  }
-  .privilege__card {
-    max-width: 60%;
-    text-align: center;
-    margin: 0 auto;
-  }
-  .promo__text-content {
-    margin-top: 100%;
-  }
-  .promo__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .included__list {
+@media (max-width: 531px) {
+  .about__flex-content {
     flex-wrap: wrap;
   }
-  .included__list li {
-    flex: 1 1 45%;
-  }
-  .podcast__cards {
-    flex-wrap: wrap;
-  }
-  .footer__container {
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-  }
-  .footer__text-content {
+  .about__text-content {
     max-width: 100%;
-    margin-bottom: 35px;
   }
-}
-@media (max-width: 379px) {
-  .included__list li {
-    flex: 1 1 100%;
-  }
-  .header__container p {
-    display: none;
+  .about__cards {
+    display: flex;
+    gap: 40px;
   }
 }
