@@ -177,6 +177,7 @@ header {
 
 .title {
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .flex-content {
@@ -184,7 +185,6 @@ header {
 }
 
 .about__flex-content {
-  margin-top: 100px;
   justify-content: space-between;
   gap: 20px;
 }
@@ -193,7 +193,100 @@ header {
   max-width: 38%;
 }
 
+.deals__list {
+  margin-left: 150px;
+}
+
+.deals__bar {
+  display: flex;
+}
+.deals__bar img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.deals__item {
+  position: relative;
+}
+.deals__item h3, .deals__item p {
+  position: absolute;
+}
+.deals__item p {
+  bottom: 40px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+.deals__item h3 {
+  top: 40px;
+  left: 40px;
+}
+
+.review {
+  background: url(../img/reviewBg.png);
+  max-width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.review__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 120px 0;
+}
+.review__container p {
+  font-weight: 700;
+}
+
+.review__date {
+  margin-left: 11.8rem;
+}
+.review__date p {
+  font-size: 4.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.review__text-content {
+  max-width: 40%;
+  margin-right: 5.9rem;
+}
+.review__text-content p {
+  font-size: 2.2rem;
+}
+
+.partners__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+}
+
+.partners__item {
+  max-width: 50%;
+}
+
+.footer__container {
+  display: flex;
+  border-top: 1px solid grey;
+  justify-content: space-between;
+}
+.footer__container p {
+  color: #989898;
+}
+
 @media (max-width: 992px) {
+  html {
+    font-size: 90%;
+  }
   .nav__bar {
     flex-wrap: wrap;
   }
@@ -209,6 +302,18 @@ header {
   .about__img {
     display: none;
   }
+  .deals__list {
+    margin: 0;
+    align-items: center;
+  }
+  .deals__bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .deals__item {
+    max-width: 40%;
+  }
 }
 @media (max-width: 767px) {
   .nav__bar-item {
@@ -218,6 +323,12 @@ header {
     display: flex;
     align-self: end;
   }
+  .review__date {
+    margin-left: 5rem;
+  }
+  .review__text-content {
+    max-width: 50%;
+  }
 }
 @media (max-width: 680px) {
   html {
@@ -225,6 +336,9 @@ header {
   }
 }
 @media (max-width: 531px) {
+  html {
+    font-size: 70%;
+  }
   .about__flex-content {
     flex-wrap: wrap;
   }

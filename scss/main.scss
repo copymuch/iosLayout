@@ -92,18 +92,96 @@ header {
 }
 .title {
     text-align: center;
+    margin-bottom: 100px;
 }
 .flex-content {
     display: flex;
 }
 .about__flex-content {
-    margin-top: 100px;
     justify-content: space-between;
     gap: 20px;
 }
 .about__text-content {
     max-width: 38%;
 }
-
+.deals__list {
+    margin-left: 150px;
+}
+.deals__bar {
+    display: flex;
+    img {
+        -o-object-fit: contain;
+           object-fit: contain;
+        max-width: 100%;
+    }
+}
+.deals__item {
+    position: relative;
+    h3,p{
+        position: absolute;
+    }
+        p {
+            bottom: 40px;
+            left: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            transform: rotate(-180deg);
+        }
+    h3 {
+        top: 40px;
+        left: 40px;
+    }
+}
+.review {
+    background: url(../img/reviewBg.png);
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.review__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 120px 0;
+    p {
+        font-weight: 700;
+    }
+}
+.review__date {
+    margin-left: 11.8rem;
+    p {
+        font-size: 4.5rem;
+        padding: 0;
+        margin: 0;
+    }
+}
+.review__text-content {
+    p {font-size: 2.2rem;}
+    max-width: 40%;
+    margin-right: 5.9rem;
+}
+.partners__bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: center;
+}
+.partners__item {
+    max-width: 50%;
+}
+.footer__container {
+    display: flex;
+    border-top: 1px solid grey;
+    justify-content: space-between;
+    p {
+        color: #989898;
+    }
+}
 
 @import "_media";
